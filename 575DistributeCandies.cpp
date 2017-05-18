@@ -1,0 +1,9 @@
+class Solution {
+public:
+    int distributeCandies(vector<int>& candies) {
+        unordered_set<int> kinds;
+        for(int k :candies)
+            kinds.insert(k);
+        return min(kinds.size(),candies.size()/2);
+    }
+};
